@@ -1,0 +1,16 @@
+{
+  "stations": [
+    { "id": 1, "name": "Baiyappanahalli", "line": "Purple", "lat": 12.9904, "lon": 77.6527 },
+    { "id": 2, "name": "Indiranagar", "line": "Purple", "lat": 12.9784, "lon": 77.6408 },
+    { "id": 3, "name": "MG Road", "line": "Purple", "lat": 12.9752, "lon": 77.6066 },
+    { "id": 4, "name": "Majestic", "line": "Both", "lat": 12.9766, "lon": 77.5713 },
+    { "id": 5, "name": "Mysore Road", "line": "Purple", "lat": 12.9467, "lon": 77.5333 },
+    { "id": 11, "name": "Nagasandra", "line": "Green", "lat": 13.0457, "lon": 77.5022 },
+    { "id": 12, "name": "Yeshwanthpur", "line": "Green", "lat": 13.0238, "lon": 77.5563 },
+    { "id": 13, "name": "Malleshwaram", "line": "Green", "lat": 13.0038, "lon": 77.5686 },
+    { "id": 14, "name": "Lalbagh", "line": "Green", "lat": 12.9507, "lon": 77.5823 },
+    { "id": 15, "name": "Jayanagar", "line": "Green", "lat": 12.9324, "lon": 77.5815 },
+    { "id": 16, "name": "Yelachenahalli", "line": "Green", "lat": 12.9064, "lon": 77.5756 }
+  ],
+  "interchange": "Majestic"
+}
