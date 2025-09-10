@@ -6,23 +6,18 @@ import json
 import math
 from urllib.parse import quote_plus
 
-# --- Environment Variables ---
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 CHAT_ID = os.getenv('CHAT_ID')
 USER_MESSAGE = os.getenv('USER_MESSAGE')
 
-# --- Load Metro Data ---
 try:
     with open('metro_data.json', 'r') as f:
         metro_data = json.load(f)
 except FileNotFoundError:
     metro_data = None
 
-# --- Initialize Google Maps Client ---
 gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
-
-# --- NEW & UPDATED TELEGRAM FUNCTIONS ---
 
 def send_telegram_message(text, keyboard=None):
     """Sends a message and returns the message_id."""
