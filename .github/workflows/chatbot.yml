@@ -1,0 +1,34 @@
+name: Bengaluru Commute Bot
+
+on:
+  workflow_dispatch:
+    inputs:
+      chat_id:
+        description: 'Telegram Chat ID'
+        required: true
+      user_message:
+        description: 'Message from the user'
+        required: true
+
+jobs:
+  run-commute-logic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests googlemaps
+
+      - name: Run Commute Logic Script
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHAT_ID: ${{ github.event.inputs.chat_id }}
+          USER_MESSAGE: ${{ github.event.inputs.user_message }}
+        run: python main.py
