@@ -53,7 +53,7 @@ def get_commute_options(origin, destination):
             f"   - *Travel Time:* {duration}\n"
             f"   - *Distance:* {distance}\n"
             f"   - *Est. Auto Fare:* ₹{auto_fare:.0f} - ₹{auto_fare + 30:.0f}\n"
-             f"   - *Est. Auto Fare:* ₹{auto_fare:.0f} - ₹{auto_fare + 45:.0f}\n"
+             f"   - *Est. Metro Fare:* ₹{metro_fare:.0f} - ₹{metro_fare + 45:.0f}\n"
             f"   - *Est. Cab Fare:* ₹{cab_fare:.0f} - ₹{cab_fare + 50:.0f}\n\n"
             f"_(Full Bus and Metro data coming soon!)_"
         )
